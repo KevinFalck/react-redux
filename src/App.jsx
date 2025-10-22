@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { addTodo, toggleTodo } from "./redux/todoSlice";
 import { selectTodos, selectCompletedTodos } from "./redux/selectors";
+
 const App = () => {
   const [input, setInput] = useState("");
   const dispatch = useDispatch();
@@ -11,6 +12,7 @@ const App = () => {
     dispatch(addTodo(input));
     setInput("");
   };
+
   return (
     <div>
       <h1>Liste des tâches</h1>
@@ -37,4 +39,5 @@ const App = () => {
     </div>
   );
 };
+
 export default App;
